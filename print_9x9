@@ -3,12 +3,10 @@
 Created on Wed Oct 28 11:51:31 2015
 
 """
-space = " "
-string = "2x1"
-string = string + space + "2x2"
-#print ("1 x 1 = 1")
+
+
 for i in range (1,10):
-    #j = i
+    
     end = i + 1
     line = ""
     for j in range(1,end):
@@ -16,8 +14,5 @@ for i in range (1,10):
         #print ("1 x 1 = 1")
         temp_str = "%1d x %1d = %2d"%(i,j,answer) 
         line = line + "  " + temp_str
-        #print (str(i) + " x " + str(j) + " = " + str(answer))
+        
     print (line)
-#answer = 1
-#a = "%02d test"%answer
-print (a)
