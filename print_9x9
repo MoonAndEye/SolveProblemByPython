@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Oct 28 11:51:31 2015
+
+"""
+space = " "
+string = "2x1"
+string = string + space + "2x2"
+#print ("1 x 1 = 1")
+for i in range (1,9):
+    #j = i
+    end = i + 1
+    line = ""
+    for j in range(1,end):
+        answer = i * j
+        #print ("1 x 1 = 1")
+        print (str(i) + " x " + str(j) + " = " + str(answer))
