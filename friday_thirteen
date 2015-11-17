@@ -4,7 +4,7 @@ Created on Wed Oct 28 15:21:47 2015
 
 
 """
-from datetime import datetime,datetime_CAPI, time, timedelta, timezone, tzinfo
+import datetime
 
 
 this_year = input('What year is this year?')
@@ -28,9 +28,9 @@ thirteen_list = []
 
 for i in range (this_year, end_year):
     for q in range(1,13):
-        if q < 10:
-            q = '0' + str(q)
-        temp_str = str(i) + dash + str(q) + dash + str(13)
-        thirteen_list.append(temp_str)
+        temp = datetime.date(i,q,13)
+        if temp.isoweekday() == 5:
+            print ('The date ' + str(temp) + ' is Friday')
         #print (str(i) + dash + str(q) + dash + str(13))
         
+#a = datetime.date()
