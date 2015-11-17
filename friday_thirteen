@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Oct 28 15:21:47 2015
+
+
+"""
+from datetime import datetime,datetime_CAPI, time, timedelta, timezone, tzinfo
+
+
+this_year = input('What year is this year?')
+
+#print (this_year)
+
+cal_target = input('How many year do you want to cal?')
+
+#print (cal_target)
+
+print (dir(datetime))
