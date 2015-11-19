@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Nov 18 11:28:19 2015
+
+Calculate the accumulate tax
+"""
+
+monthly_income = input('How much do you earn every month?')
+
+income_level = [0,     #level 0
+             500,   #level 1
+             2000,  #level 2
+             5000,  #level 3
+             20000, #level 4
+             40000, #level 5
+             60000, #level 6
+             80000, #level 7
+             100000 #level 8
+             #over than 100000 is level 9
+             ]
+
+tax_level = [0,
+             5,
+             10,
+             15,
+             20,
+             25,
+             30,
+             35,
+             40,
+             45
+             ]
+             
+        
+for i in income_level:
+    if i<
+
+             
