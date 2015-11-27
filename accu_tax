@@ -36,3 +36,4 @@ for i in income_level:
     if i<
 
              
+#應該要開個def
