@@ -6,6 +6,7 @@ Calculate the accumulate tax
 """
 
 monthly_income = input('How much do you earn every month?')
+monthly_income = int(monthly_income)
 
 income_level = [0,     #level 0
              500,   #level 1
@@ -33,7 +34,20 @@ tax_level = [0,
              
         
 for i in income_level:
-    if i<
+    j = int(income_level.index(i)) + 1
+    #if monthly_income < income_level[j] && monthly_income > i:
+        #print (i)
 
-             
-#應該要開個def
+def find_tax_level(income, list_name):
+    #income 就是收入, 這邊用的是input
+    #list_name 這邊就是 稅級距的 list
+    judgement = 0
+    for i in range(len(list_name)):
+        j = i + 1
+        if income > list_name[i] and income < list_name[j]:
+            judgement = i
+        return judgement
+
+result = find_tax_level(monthly_income, income_level)
+
+print (result)
