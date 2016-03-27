@@ -23,4 +23,8 @@ Created on Sun Mar 27 21:53:58 2016
 然後又是幾顆?
 
 """
+a = [i*2 for i in range(5)]
+b = [i*2-1 for i in range(1,6)]
 
+c = [a+b for a, b in zip(a,b)]
+print(a)
