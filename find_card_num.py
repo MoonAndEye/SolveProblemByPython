@@ -42,9 +42,18 @@ def takeEachDig(number):
     percentile.reverse()
     return(percentile)
 
-test = input("test input: ")
+#test = input("test input: ")
 
-a = takeEachDig(test)
+answer = []
 
-print(a)    
+for i in range(33,100):
+    i = i **2
+    temp = takeEachDig(str(i))
+    if temp[0] == temp [1] and temp[2] == temp[3]:
+        answer.append(i)
+    else:
+        pass
+    
+
+print(answer)
         
