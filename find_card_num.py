@@ -32,3 +32,15 @@ c == d
 那個 i 就是答案
 
 """
+
+def takeEachDig(number):
+    percentile = []
+    percentile = list(number)
+    return(percentile)
+
+test = input("test input: ")
+
+a = takeEachDig(test)
+
+print(a)    
+        
