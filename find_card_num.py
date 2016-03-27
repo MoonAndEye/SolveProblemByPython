@@ -34,8 +34,12 @@ c == d
 """
 
 def takeEachDig(number):
+    """
+    這個回傳的list，
+    """
     percentile = []
     percentile = list(number)
+    percentile.reverse()
     return(percentile)
 
 test = input("test input: ")
