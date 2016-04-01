@@ -76,10 +76,11 @@ times = 0
 while notEnd(children) != 0:
     times = times + 1
     children = oddPlusOne(children)
-    children = [int(i/2) for i in children]
-    receive = candyNumGive(children)
-    children = [children + receive for children, receive in zip(children, receive)]
     
+    receive = candyNumGive(children)
+    children = [int(i/2) for i in children]
+    children = [children + receive for children, receive in zip(children, receive)]
+    print("次數: " + str(times) + " 過程: " + str(children) )
 print('times is ' + str(times))
 
 print("Result is " + str(children))
