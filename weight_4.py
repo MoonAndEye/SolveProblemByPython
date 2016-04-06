@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Apr  4 21:49:40 2016
-
 @author: Moon
 """
 
@@ -46,13 +45,27 @@ for w1 in range(1,40):
 real_sol_space = delRepeat(sol_space)                   
 #print(sol_space)
 
-"""            
-test = [1,2,2,35]
+def exhuastive(sol_s=list, coefficient=list, fit=list):
+    """            
+    sol_s 這邊放解空間
 
-for each in test:
-    a = notRepeat(test)
-    print(a)
-    b = test.count(each)
-    print(b)
-"""
-                    
+    這邊放係數
+
+    這邊放解答
+    """
+    for each_s in sol_s:
+        index = 0
+        for try_fit in fit:
+            for a1 in coefficient:
+                for a2 in coefficient:
+                    for a3 in coefficient:
+                        for a4 in coefficient:
+                            if a1*each_s[0] +a2*each_s[1] +a3*each_s[2] +a4*each_s[3] - try_fit == 0:
+                                index = index +1
+                            else:
+                                pass
+        print(each_s)        
+        print(index)
+        
+a = [i for i in range(1,41)]
+exhuastive(sol_space, [-1,0,1],a)
