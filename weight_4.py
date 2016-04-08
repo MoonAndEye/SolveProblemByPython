@@ -44,15 +44,16 @@ for w1 in range(1,40):
                     
 real_sol_space = delRepeat(sol_space)                   
 #print(sol_space)
-
+"""
 def exhuastive(sol_s=list, coefficient=list, fit=list):
-    """            
-    sol_s 這邊放解空間
+"""            
+    #sol_s 這邊放解空間
 
-    這邊放係數
+    #這邊放係數
 
-    這邊放解答
-    """
+    #這邊放解答
+"""
+    return_list=[]
     for each_s in sol_s:
         index = 0
         for try_fit in fit:
@@ -64,8 +65,62 @@ def exhuastive(sol_s=list, coefficient=list, fit=list):
                                 index = index +1
                             else:
                                 pass
-        print(each_s)        
-        print(index)
-        
+        if index == 40:
+            return_list.append(each_s)
+                
+    return(return_list)        
+"""        
 a = [i for i in range(1,41)]
-exhuastive(sol_space, [-1,0,1],a)
+#b = exhuastive(sol_space, [-1,0,1],a)
+#print(b)
+answer = []
+for weight in real_sol_space:
+    solve = {}
+    x1 = weight[0]
+    x2 = weight[1]
+    x3 = weight[2]
+    x4 = weight[3]
+    for tryFit in range(1,41):
+        for a1 in range(-1,2):
+            for a2 in range(-1,2):
+                for a3 in range(-1,2):
+                    for a4 in range(-1,2):
+                        if a1 * x1 + a2 * x2 + a3 * x3 + a4 * x4 == tryFit:
+                            solve[tryFit] = [a1,a2,a3,a4]
+                            
+                        else:
+                            pass
+                    
+    if len(solve) == 40:
+        answer.append(weight)
+    else:
+        pass
+        
+print("四個砝碼質量分別是" + str(answer[0]) )              
+
+answer = answer[0]
+p1 = answer[0]
+p2 = answer[1] 
+p3 = answer[2]
+p4 = answer[3]
+
+for tryFit in range(1,41):
+    for a1 in range(-1,2):
+        for a2 in range(-1,2):
+            for a3 in range(-1,2):
+                for a4 in range(-1,2):
+                    if a1 * p1 + a2 * p2 + a3 * p3 + a4 * p4 == tryFit:
+                        multi = " * "
+                        plus = " + "
+                        
+                        a1p = str(a1)
+                        a2p = str(a2)
+                        a3p = str(a3)
+                        a4p = str(a4)
+                        p1p = str(p1)
+                        p2p = str(p2)
+                        p3p = str(p3)
+                        p4p = str(p4)
+                        
+                        printout = a1p + multi + p1p + plus + a2p + multi +p2p + plus +a3p+ multi +p3p + plus + a4p + multi +p4p
+                        print( str(tryFit) + " = " + printout)
