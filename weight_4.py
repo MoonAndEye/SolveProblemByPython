@@ -96,8 +96,8 @@ for weight in real_sol_space:
     else:
         pass
         
-print("四個砝碼質量分別是" + str(answer[0]) )              
-
+print("四個砝碼質量分別是" + str(answer[0])+'\n' )              
+print("下面是秤出1到40克的組合方式")
 answer = answer[0]
 p1 = answer[0]
 p2 = answer[1] 
