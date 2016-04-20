@@ -1,33 +1,31 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Apr  8 22:53:32 2016
+Created on Wed Apr 20 13:14:33 2016
 
-@author: Moon
-
-平分七筐魚，有甲乙丙三位魚夫一起出海打魚。身上帶了21只籮筐。
-
-當天結束後，七筐滿的，七筐半滿，七筐空的。
-
-假設滿的，半滿的，程度完全相同。
-
-在不倒出任何一條魚的情況，如何將魚和魚筐平分三份?
-
+@author: 
 """
-
 import numpy as np
 
-def initMatrix(dimension = 1, init = 0):
-    matrix = []    
-    for i in range(dimension):
-        for i in range(dimension):
-            pass
-    
+a = np.array([1,1,1])
+b = np.array([1,0.5,0])
 
-i = 0
+print (a*b)
+c = a*b
+d = np.dot(a,b)
+print(sum(c))
+print(d)
 
-fall = i
+weight = [1,0.5,0]
+sol = []
 
-half_f = (3.5 - fall) * 2
-
-empty = 7 - fall - half_f
-
+for i in range(1,8):
+    for j in range(1,8):
+        fish_a = [i, 7-i-i, i]
+        fish_b = [j, 7-j-j, j]
+        fish_c = [7-i-j, 2*i+2*j-7,7-i-j]
+        if np.dot(weight, fish_a) == 3.5 and np.dot(weight, fish_b) == 3.5 and fish_c[0] >=0 and fish_c[1] >0:
+            sol.append(fish_a)
+            sol.append(fish_b)
+            sol.append(fish_c)
+print(sol)
+        
