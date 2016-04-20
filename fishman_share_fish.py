@@ -33,5 +33,3 @@ for i in range(1,4):
 
 for each in sol:
     print(each)
-
-        
