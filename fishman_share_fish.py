@@ -30,6 +30,8 @@ for i in range(1,4):
             temp.append(fish_c)
             sol.append(temp)
             
+print("第一組解")
+print(sol[0])
 
-for each in sol:
-    print(each)
+print("第二組解")
+print(sol[1])
